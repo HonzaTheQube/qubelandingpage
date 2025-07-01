@@ -11,8 +11,8 @@ type TimeLeft = {
 }
 
 export default function CountdownTimer() {
-  // Set end date to July 1, 2025
-  const [endDate] = useState(new Date("2025-07-01T00:00:00"))
+  // Set end date to September 11, 2025
+  const [endDate] = useState(new Date("2025-09-11T00:00:00"))
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 })
 
   useEffect(() => {

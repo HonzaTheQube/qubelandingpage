@@ -5,7 +5,7 @@ export async function GET() {
     const totalSeats = 60 // Total capacity
 
     // Simulace počtu registrací
-    const workshopDate = new Date("2025-07-01T00:00:00")
+    const workshopDate = new Date("2025-09-11T00:00:00")
     const now = new Date()
     const timeRemaining = workshopDate.getTime() - now.getTime()
     const daysTillWorkshop = Math.floor(timeRemaining / (1000 * 60 * 60 * 24))

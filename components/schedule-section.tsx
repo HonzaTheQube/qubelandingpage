@@ -17,29 +17,29 @@ export default function ScheduleSection() {
 
   const scheduleItems: ScheduleItem[] = [
     {
-      date: "02.07.2025",
-      formattedDate: "2. července 2025",
-      day: "02",
-      month: "07",
+      date: "11.09.2025",
+      formattedDate: "11. září 2025",
+      day: "11",
+      month: "09",
     },
     {
-      date: "09.07.2025",
-      formattedDate: "9. července 2025",
-      day: "09",
-      month: "07",
+      date: "17.09.2025",
+      formattedDate: "17. září 2025",
+      day: "17",
+      month: "09",
     },
     {
-      date: "19.07.2025",
-      formattedDate: "19. července 2025",
-      day: "19",
-      month: "07",
+      date: "24.09.2025",
+      formattedDate: "24. září 2025",
+      day: "24",
+      month: "09",
     },
   ]
 
   // Rotate active index every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % scheduleItems.length)
+      setActiveIndex((prev: number) => (prev + 1) % scheduleItems.length)
     }, 3000)
     return () => clearInterval(interval)
   }, [scheduleItems.length])

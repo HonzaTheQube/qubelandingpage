@@ -96,3 +96,10 @@ export const pixelEvents = {
     })
   },
 }
+
+// Declare fbq function for TypeScript
+declare global {
+  interface Window {
+    fbq: (...args: any[]) => void
+  }
+}

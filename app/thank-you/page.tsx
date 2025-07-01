@@ -21,7 +21,7 @@ export default function ThankYou({ searchParams }: { searchParams: { [key: strin
 
     // Meta Pixel tracking
     pixelEvents.trackPurchase(value, "CZK", {
-      content_name: `AI zaměstnanec - ${tier.toUpperCase()}`,
+      content_name: `AI zaměstnanec - ${typeof tier === 'string' ? tier.toUpperCase() : 'STANDARD'}`,
       content_type: "product",
       content_category: "kurz",
       transaction_id: sessionId,
@@ -73,7 +73,7 @@ export default function ThankYou({ searchParams }: { searchParams: { [key: strin
                 2
               </span>
               <span>
-                Kurz začíná 02. července 2025 - do e-mailu Vám příjde pozvánka do našeho společného kalendáře, po jejím
+                Kurz začíná 11. září 2025 - do e-mailu Vám příjde pozvánka do našeho společného kalendáře, po jejím
                 přijetí se Vám všechny naše plánované sessions automaticky propišou do Vašeho kalendáře.
               </span>
             </li>
