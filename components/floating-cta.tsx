@@ -53,8 +53,8 @@ export default function FloatingCTA() {
             onClick={() => setIsModalOpen(true)}
             className="flex items-center justify-center px-3 py-2 md:px-4 md:py-3 bg-primary text-white font-medium rounded-md hover:bg-primary/90 transition-colors text-sm md:text-base whitespace-nowrap min-h-[44px] touch-manipulation"
           >
-            <span className="hidden sm:inline">{cs.ctaVariants.primary}</span>
-            <span className="sm:hidden">{cs.ctaVariants.stickyMobile}</span>
+            <span className="hidden sm:inline">{cs.ctaVariants?.primary ?? "Rezervovat místo"}</span>
+            <span className="sm:hidden">{cs.ctaVariants?.stickyMobile ?? cs.navbar.ctaShort}</span>
           </button>
         </motion.div>
       )}

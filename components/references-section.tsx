@@ -44,8 +44,8 @@ export default function ReferencesSection() {
               href="#cena"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-base md:text-lg font-semibold px-8 md:px-12 py-3 md:py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] min-h-[44px] touch-manipulation"
             >
-              <span className="hidden sm:inline">{cs.ctaVariants.tertiary}</span>
-              <span className="sm:hidden">{cs.ctaVariants.stickyMobile}</span>
+              <span className="hidden sm:inline">{cs.ctaVariants?.tertiary ?? "Chci být součástí kurzu"}</span>
+              <span className="sm:hidden">{cs.ctaVariants?.stickyMobile ?? cs.navbar.ctaShort}</span>
             </a>
           </div>
         </motion.div>

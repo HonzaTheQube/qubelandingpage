@@ -76,7 +76,7 @@ export default function Navbar() {
             onClick={(e) => handleScrollToSection(e, "cena")}
             className="bg-primary hover:bg-primary/90 text-white py-2 px-3 rounded-md text-sm font-medium transition-all"
           >
-            {cs.ctaVariants.stickyMobile}
+            {cs.ctaVariants?.stickyMobile ?? cs.navbar.ctaShort}
           </a>
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
