@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { ArrowUp } from "lucide-react"
 import CheckoutModal from "./checkout-modal"
 import { useSeatsData } from "@/hooks/use-seats-data"
+import cs from "@/content/cs"
 
 export default function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false)
@@ -42,7 +43,7 @@ export default function FloatingCTA() {
         >
           <button
             onClick={scrollToTop}
-            aria-label="Zpět nahoru"
+            aria-label={cs.floatingCta.backToTop}
             className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-dark border border-white/10 hover:bg-dark/80 transition-colors min-h-[44px] touch-manipulation"
           >
             <ArrowUp size={16} className="md:w-5 md:h-5 text-white" />
@@ -52,8 +53,8 @@ export default function FloatingCTA() {
             onClick={() => setIsModalOpen(true)}
             className="flex items-center justify-center px-3 py-2 md:px-4 md:py-3 bg-primary text-white font-medium rounded-md hover:bg-primary/90 transition-colors text-sm md:text-base whitespace-nowrap min-h-[44px] touch-manipulation"
           >
-            <span className="hidden sm:inline">Rezervovat místo</span>
-            <span className="sm:hidden">Rezervovat</span>
+            <span className="hidden sm:inline">{cs.ctaVariants.primary}</span>
+            <span className="sm:hidden">{cs.ctaVariants.stickyMobile}</span>
           </button>
         </motion.div>
       )}

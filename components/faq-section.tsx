@@ -6,21 +6,21 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export default function FaqSection() {
   const faqs = [
     {
-      question: "Potřebuji umět programovat abych se mohl kurzu zůčastnit?",
+      question: "Potřebuji umět programovat abych se mohl kurzu zúčastnit?",
       answer: "Ne, kurz je pro úplné laiky; vše stavíme klikací formou a ukážeme vám přesně, co a kde nastavit.",
     },
     {
       question: "Můžu si kurz pustit i zpětně?",
-      answer: "Ano, každá lekce se nahrává a v členské sekci Vám zůstavá po celou dobu kurzu.",
+      answer: "Ano, každá lekce se nahrává a v členské sekci vám zůstává po celou dobu kurzu.",
     },
     {
       question: "Je možné kurz uhradit na firmu?",
       answer:
-        "Samozřejmě – stačí zvolit variantu chci nakupovat na firmu při platbě, zadat IČO a fakturu Vám rovnou vystavíme na firmu.",
+        "Samozřejmě – stačí zvolit variantu chci nakupovat na firmu při platbě, zadat IČO a fakturu vám rovnou vystavíme na firmu.",
     },
     {
       question: "Co když se nestihnu vše naučit za 3 týdny?",
-      answer: "Pokud si zaplatíte verzi kurzu PRO, tak Vám materiály a vstup do komunity zůstavají doživotně.",
+      answer: "Pokud si zaplatíte verzi kurzu PRO, tak vám materiály a vstup do komunity zůstávají doživotně.",
     },
   ]
 

@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { Check } from "lucide-react"
 import CheckoutModal from "./checkout-modal"
 import { useSeatsData } from "@/hooks/use-seats-data"
+import cs from "@/content/cs"
 
 export default function OfferSection() {
   const offerItems = [
@@ -32,15 +33,14 @@ export default function OfferSection() {
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold mb-4 md:mb-6 text-center">
             <span className="relative">
-              Neodolatelná
+              {cs.offer.headingPrefix}
               <span className="absolute -bottom-1 md:-bottom-2 left-0 w-full h-0.5 md:h-1 bg-primary rounded-full"></span>
             </span>{" "}
-            nabídka
+            {cs.offer.headingSuffix}
           </h2>
 
           <p className="text-lg md:text-xl text-center text-light/80 mb-8 md:mb-12 max-w-4xl mx-auto">
-            Tvoříte si vlastního AI zaměstnance, který vás stojí jen zlomek ceny oproti tomu klasickému a pracuje pro
-            vás kdy chcete, jak chcete, a to bez nutnosti zvyšování mzdy.
+            {cs.offer.description}
           </p>
 
           <div className="bg-surface/30 backdrop-blur-md border border-white/10 shadow-card rounded-xl overflow-hidden">
@@ -75,9 +75,9 @@ export default function OfferSection() {
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="border-b border-white/10">
-                    <th className="py-4 px-6 text-left">Položka</th>
-                    <th className="py-4 px-6 text-center">Hodnota</th>
-                    <th className="py-4 px-6 text-center">Vaše cena</th>
+                    <th className="py-4 px-6 text-left">{cs.offer.table.headers.item}</th>
+                    <th className="py-4 px-6 text-center">{cs.offer.table.headers.value}</th>
+                    <th className="py-4 px-6 text-center">{cs.offer.table.headers.price}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -90,11 +90,11 @@ export default function OfferSection() {
                         </div>
                       </td>
                       <td className="py-4 px-6 text-center">{item.value}</td>
-                      <td className="py-4 px-6 text-center font-medium">
+                       <td className="py-4 px-6 text-center font-medium">
                         {item.price === "ZDARMA" ? (
-                          <span className="text-primary">{item.price}</span>
+                          <span className="text-primary">{cs.offer.table.priceFree}</span>
                         ) : item.price === "ZISK" ? (
-                          <span className="text-green-500">{item.price}</span>
+                          <span className="text-green-500">{cs.offer.table.priceProfit}</span>
                         ) : (
                           <span>{item.price}</span>
                         )}
@@ -106,27 +106,34 @@ export default function OfferSection() {
             </div>
 
             <div className="p-4 md:p-6 bg-primary/10 border-t border-white/10">
+              <div className="flex items-center justify-center mb-2">
+                <span className="inline-block bg-primary text-white text-xs md:text-sm px-3 py-1 rounded-full">
+                  {cs.offer.ribbon}
+                </span>
+              </div>
               <p className="text-base md:text-lg text-center font-medium">
-                Celková hodnota:{" "}
-                <span className="line-through text-light/70">{totalValueOriginal.toLocaleString()} Kč</span> → platíte
-                pouze <span className="text-primary font-bold">9 997 Kč</span>
+                {cs.offer.recap.totalValueLabel}{" "}
+                <span className="line-through text-light/70">{totalValueOriginal.toLocaleString()} Kč</span> → {cs.offer.recap.payOnlyPrefix}
+                {" "}
+                <span className="text-primary font-bold">{cs.offer.recap.payOnlyPrice}</span>
               </p>
               <p className="text-center mt-2 text-sm md:text-base">
-                Jste pouze 9 997,-Kč od toho abyste ročně svému businessu ušetřili stovky tisíc. Nezahoďte tuto šanci.
+                {cs.offer.recap.microClaim}
               </p>
             </div>
           </div>
 
           <div className="mt-8 md:mt-12 text-center">
             <h3 className="text-lg md:text-xl lg:text-2xl font-normal mb-4 md:mb-6 text-white">
-              Využij tuto nabídku hned teď!
+              {cs.offer.ctaTitle}
             </h3>
             <button
               onClick={() => setIsModalOpen(true)}
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-base md:text-lg font-semibold px-8 md:px-12 py-3 md:py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] min-h-[44px] touch-manipulation"
             >
-              Rezervovat místo
+              {cs.offer.ctaButton}
             </button>
+            <p className="text-xs md:text-sm text-light/70 mt-3">{cs.offer.urgencyNote}</p>
           </div>
 
           <CheckoutModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} seatsLeft={remainingSeats} />
