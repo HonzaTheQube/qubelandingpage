@@ -49,7 +49,7 @@ export default function ThankYou({ searchParams }: { searchParams: { [key: strin
         </div>
 
         <h1 className="text-4xl lg:text-5xl font-display font-extrabold mb-12">
-          Děkujeme za Vaši důvěru{firstName ? `, ${firstName}` : ""}!
+          Děkujeme za vaši důvěru{firstName ? `, ${firstName}` : ""}!
         </h1>
 
         <div className="w-full shadow-neon mb-10 rounded-xl overflow-hidden">
@@ -64,7 +64,7 @@ export default function ThankYou({ searchParams }: { searchParams: { [key: strin
                 1
               </span>
               <span>
-                Zkontrolujte svůj e-mail, kde Vám dojde mail pro potvrzení obejdnávky se všemi potřebnimi počátečními
+                Zkontrolujte svůj e-mail, kde vám dojde mail pro potvrzení objednávky se všemi potřebnými počátečními
                 informacemi.
               </span>
             </li>
@@ -73,8 +73,8 @@ export default function ThankYou({ searchParams }: { searchParams: { [key: strin
                 2
               </span>
               <span>
-                Kurz začíná 11. září 2025 - do e-mailu Vám příjde pozvánka do našeho společného kalendáře, po jejím
-                přijetí se Vám všechny naše plánované sessions automaticky propišou do Vašeho kalendáře.
+                Kurz začíná 11. září 2025 – do e-mailu vám přijde pozvánka do našeho společného kalendáře, po jejím
+                přijetí se vám všechny naše plánované sessions automaticky propíšou do vašeho kalendáře.
               </span>
             </li>
             <li className="flex items-start">

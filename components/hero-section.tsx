@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { useState, useEffect, useRef } from "react"
 import CheckoutModal from "./checkout-modal"
 import { useSeatsData } from "@/hooks/use-seats-data"
+import cs from "@/content/cs"
 
 declare global {
   interface Window {
@@ -99,13 +100,13 @@ export default function HeroSection() {
           transition={{ duration: 0.6 }}
         >
           <span className="relative inline-block mb-1">
-            Zaměstnanec
+            {cs.hero.titleMain}
             <span className="absolute -bottom-0.5 left-0 w-full h-0.5 bg-primary transform skew-x-12"></span>
           </span>
-          , <span className="text-primary">který pracuje nepřetržitě,</span>
+          , <span className="text-primary">{cs.hero.titleHighlight}</span>
           <br className="hidden sm:block" />
           <span className="sm:hidden"> </span>
-          bez stížností a s minimálními náklady.
+          {cs.hero.titleSuffix}
         </motion.h1>
 
         <motion.p
@@ -114,7 +115,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Postavte si vlastního AI zaměstnance, který vykonává svou práci 24/7, přesně podle vašich představ.
+          {cs.hero.subtitle}
         </motion.p>
       </div>
 
@@ -131,7 +132,7 @@ export default function HeroSection() {
               ref={iframeRef}
               className="absolute top-0 left-0 w-full h-full"
               src="https://www.youtube.com/embed/N6IuHKKJpfM?si=MhI5RBM7soCnCeef&enablejsapi=1&disablekb=1&fs=0&modestbranding=1&rel=0&controls=1&cc_load_policy=0&iv_load_policy=3&playsinline=1&origin=https://qube.ai"
-              title="AI Workshop - Úvodní video"
+              title={cs.hero.videoTitle}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               loading="eager"
@@ -175,8 +176,7 @@ export default function HeroSection() {
           onClick={() => setIsModalOpen(true)}
           className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-lg sm:text-xl md:text-2xl font-bold px-8 sm:px-10 md:px-12 py-3 md:py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] min-h-[44px] touch-manipulation"
         >
-          <span className="block sm:inline">Chci si zarezervovat</span>
-          <span className="block sm:inline sm:ml-1">místo v kurzu!</span>
+          <span className="block sm:inline">{cs.hero.cta}</span>
         </button>
       </motion.div>
       <CheckoutModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} seatsLeft={remainingSeats} />

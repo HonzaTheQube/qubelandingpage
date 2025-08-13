@@ -5,6 +5,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
 import { Menu, X } from "lucide-react"
+import cs from "@/content/cs"
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -27,15 +28,7 @@ export default function Navbar() {
     }
   }
 
-  const navLinks = [
-    { href: "#o-kurzu", label: "O kurzu" },
-    { href: "#obsah", label: "Obsah" },
-    { href: "#lektori", label: "Lektoři" },
-    { href: "#harmonogram", label: "Harmonogram" },
-    { href: "#cena", label: "Cena" },
-    { href: "#faq", label: "FAQ" },
-    { href: "#kontakt", label: "Kontakt" },
-  ]
+  const navLinks = cs.navbar.links
 
   return (
     <header
@@ -72,7 +65,7 @@ export default function Navbar() {
             onClick={(e) => handleScrollToSection(e, "cena")}
             className="bg-primary hover:bg-primary/90 text-white py-2 px-4 xl:py-3 xl:px-6 rounded-md text-sm xl:text-base font-medium transition-all whitespace-nowrap"
           >
-            Rezervovat místo – 9 997 Kč
+            {cs.navbar.ctaFull}
           </a>
         </div>
 
@@ -83,7 +76,7 @@ export default function Navbar() {
             onClick={(e) => handleScrollToSection(e, "cena")}
             className="bg-primary hover:bg-primary/90 text-white py-2 px-3 rounded-md text-sm font-medium transition-all"
           >
-            Rezervovat
+            {cs.ctaVariants?.stickyMobile ?? cs.navbar.ctaShort}
           </a>
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

@@ -3,25 +3,10 @@
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Quote } from "lucide-react"
+import cs from "@/content/cs"
 
 export default function ReferencesSection() {
-  const references = [
-    {
-      company: "Lama Energy Group",
-      quote:
-        "AI zaměstnanci nám pomohli překlopit část naší operativy do plnohodnotné automatizace. Úspora: 120+ hodin měsíčně a nákladově stovky tisíc ročně.",
-    },
-    {
-      company: "StavbyDay",
-      quote:
-        'Proměnili jsme se z "Cavemana" na firmu, která díky síle AI zaměstnanců zautomatizovala komplexně celý proces fakturace, schvalování, vytváření na zalistování nabídek a reportingu.',
-    },
-    {
-      company: "Eurepol s.r.o.",
-      quote:
-        "Náklady na naší administrativu se snížily o 40 %. Nechápu, že jsme to neudělali dřív. AI zaměstnanci jsou budoucnost podnikání a my už pracujeme na tom abychom co nejdříve měli v týmu další.",
-    },
-  ]
+  const references = cs.references.items
 
   return (
     <section className="py-20 lg:py-28 bg-black">
@@ -32,7 +17,7 @@ export default function ReferencesSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-12 text-center">Reference firem</h2>
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-12 text-center">{cs.references.heading}</h2>
 
           <div className="grid md:grid-cols-3 gap-6">
             {references.map((ref, index) => (
@@ -52,6 +37,16 @@ export default function ReferencesSection() {
                 </Card>
               </motion.div>
             ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <a
+              href="#cena"
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white text-base md:text-lg font-semibold px-8 md:px-12 py-3 md:py-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] min-h-[44px] touch-manipulation"
+            >
+              <span className="hidden sm:inline">{cs.ctaVariants?.tertiary ?? "Chci být součástí kurzu"}</span>
+              <span className="sm:hidden">{cs.ctaVariants?.stickyMobile ?? cs.navbar.ctaShort}</span>
+            </a>
           </div>
         </motion.div>
       </div>
