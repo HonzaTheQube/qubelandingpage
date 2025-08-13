@@ -61,7 +61,7 @@ export default function UseCasesRich() {
           ))}
         </div>
 
-        <div className="mt-10">
+        <div className="mt-10 text-center">
           <a
             href="#cena"
             className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 font-medium hover:shadow-[0_0_30px_rgba(11,92,249,0.5)] transition-shadow"

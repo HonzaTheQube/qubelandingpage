@@ -24,7 +24,6 @@ export default function Home() {
       <UseCasesRich />
       <StorySection />
       <ComparisonSection />
-      <SectionCta />
       <OfferSection />
       <ReferencesSection />
       <SectionCta />
