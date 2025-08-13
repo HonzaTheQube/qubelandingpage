@@ -21,11 +21,14 @@ export default function UseCasesRich() {
   return (
     <section id={data.anchorId} className="bg-black text-white py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl">
-          <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tight">
-            {data.heading}
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tight mb-4 md:mb-6">
+            <span className="relative inline-block">
+              {data.heading}
+              <span className="absolute -bottom-1 md:-bottom-2 left-0 w-full h-0.5 md:h-1 bg-primary rounded-full"></span>
+            </span>
           </h2>
-          <p className="mt-4 text-base md:text-lg text-white/70">
+          <p className="mt-0 text-base md:text-lg text-white/70 max-w-3xl mx-auto">
             {data.subheading}
           </p>
         </div>
