@@ -2,6 +2,7 @@ import Navbar from "@/components/navbar"
 import HeroSection from "@/components/hero-section"
 import StorySection from "@/components/story-section"
 import UseCasesSection from "@/components/use-cases-section"
+import UseCasesRich from "@/components/UseCasesRich"
 import ComparisonSection from "@/components/comparison-section"
 import OfferSection from "@/components/offer-section"
 import ReferencesSection from "@/components/references-section"
@@ -20,7 +21,7 @@ export default function Home() {
     <main className="min-h-screen bg-black text-light">
       <Navbar />
       <HeroSection />
-      <UseCasesSection />
+      <UseCasesRich />
       <StorySection />
       <ComparisonSection />
       <SectionCta />
