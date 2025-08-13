@@ -34,6 +34,46 @@ export const cs = {
     videoTitle: "AI Workshop – Úvodní video",
     cta: "Chci si zarezervovat místo v kurzu!",
   },
+  /* Duplicate at bottom removed; authoritative definition placed here under hero */
+  useCasesRich: {
+    anchorId: "vyuziti-v-praxi",
+    heading: "Příklady využití v praxi",
+    subheading:
+      "Všechny níže uvedené AI zaměstnance jsme navrhli, vyvinuli a nasadili do reálných procesů klientů. Níže uvádíme zkrácené výsledky, úspory a návratnosti.",
+    items: [
+      {
+        title: "1️⃣ AI Fakturant – přes tisíc faktur měsíčně bez stresu",
+        paragraphs: [
+          "Firma měla tři účetní a každý měsíc se jim na stole sešlo přes tisíc faktur. Byla to práce na dlouhé hodiny, často i dny, a finální reporty pro vedení společnosti  se často zpožďovaly. Po nasazení našeho AI parťáka se ale všechno změnilo – AI dokázala faktury kompletně vytěžit, zpracovat a připravit podklady tak, aby je jedna účetní jen rychle prošla a potvrdila.",
+          "Navíc se po potvrzení data automaticky zpracovaly aby se mohli vygenerovat přehledné reporty, takže vedení má v reálném čase jasno, jak si firma vede.",
+        ],
+        highlight1:
+          "💰 Úspora: po odečtení nákladů na AI a odvodů zhruba 78 400 Kč měsíčně (roční úspora kolem 940 800 Kč).",
+        highlight2: "⏳ Návratnost: 4–6 měsíců.",
+      },
+      {
+        title: "2️⃣ AI Obchodník – prodává, i když spíte",
+        paragraphs: [
+          "Klient měl problém – nedařilo se mu sehnat zkušené a rychlé obchodníky, kteří by zvládali pracovat velice efektivně. Postavili jsme mu proto AI obchodníka, který nejen aktivně oslovuje nové zákazníky, ale také sám píše prodejní texty, připravuje nabídky a rychle reaguje na poptávky od zákazníků",
+          "Tím ušetřil obchodníkům spoustu času, který mohli věnovat tomu nejdůležitějšímu – uzavírání obchodů. Výsledek? Vyšší produktivita, více oslovovených klientů a větší šance pro růst obratu.",
+        ],
+        highlight1:
+          "💰 Úspora: firma nemusela nabírat dalšího obchodníka – zhruba 50 000 Kč měsíčně (roční úspora 600 000 Kč).",
+        highlight2: "⏳ Návratnost: 3–4 měsíce.",
+      },
+      {
+        title: "3️⃣ AI Analytik trhu – náskok před konkurencí každý den",
+        paragraphs: [
+          "Pozice analytika trhu a konkurence ve většině menších firem vůbec neexistuje. Často to supluje majitel nebo se tomu nevěnuje nikdo. Přitom správné informace ve správný čas rozhodují o tom, kdo vyhraje danou zakázku.",
+          "Náš AI analytik každý den sleduje, co dělá konkurence – jak mění ceny, jak reaguje na poptávky na trhu, a kontroluje co se tedy celkově na trhu děje. Dokáže včas upozornit na příležitosti i hrozby a pomůže vám jednat dřív než ostatní.",
+        ],
+        highlight1:
+          "💰 Příklad přínosu: Díky aktuálním informacím uzavřel náš klient za rok další zakázky v hodnotě  400 000 Kč.",
+        highlight2: "⏳ Návratnost: 6–8 měsíců.",
+      },
+    ],
+    ctaBelow: "Chci podobného AI zaměstnance pro svůj byznys",
+  },
   story: {
     heading: "Proč teď?",
     points: [
@@ -294,45 +334,6 @@ export const cs = {
   countdown: {
     endsIn: "Registrace končí za:",
     units: { days: "Dní", hours: "Hodin", minutes: "Minut", seconds: "Sekund" },
-  },
-  useCasesRich: {
-    anchorId: "vyuziti-v-praxi",
-    heading: "Příklady využití v praxi",
-    subheading:
-      "Všechny níže uvedené AI zaměstnance jsme navrhli, vyvinuli a nasadili do reálných procesů klientů. Níže uvádíme zkrácené výsledky, úspory a návratnosti.",
-    items: [
-      {
-        title: "1️⃣ AI Fakturant – přes tisíc faktur měsíčně bez stresu",
-        paragraphs: [
-          "Firma měla tři účetní a každý měsíc se jim na stole sešlo přes tisíc faktur. Byla to práce na dlouhé hodiny, často i dny, a finální reporty pro vedení společnosti  se často zpožďovaly. Po nasazení našeho AI parťáka se ale všechno změnilo – AI dokázala faktury kompletně vytěžit, zpracovat a připravit podklady tak, aby je jedna účetní jen rychle prošla a potvrdila.",
-          "Navíc se po potvrzení data automaticky zpracovaly aby se mohli vygenerovat přehledné reporty, takže vedení má v reálném čase jasno, jak si firma vede.",
-        ],
-        highlight1:
-          "💰 Úspora: po odečtení nákladů na AI a odvodů zhruba 78 400 Kč měsíčně (roční úspora kolem 940 800 Kč).",
-        highlight2: "⏳ Návratnost: 4–6 měsíců.",
-      },
-      {
-        title: "2️⃣ AI Obchodník – prodává, i když spíte",
-        paragraphs: [
-          "Klient měl problém – nedařilo se mu sehnat zkušené a rychlé obchodníky, kteří by zvládali pracovat velice efektivně. Postavili jsme mu proto AI obchodníka, který nejen aktivně oslovuje nové zákazníky, ale také sám píše prodejní texty, připravuje nabídky a rychle reaguje na poptávky od zákazníků",
-          "Tím ušetřil obchodníkům spoustu času, který mohli věnovat tomu nejdůležitějšímu – uzavírání obchodů. Výsledek? Vyšší produktivita, více oslovovených klientů a větší šance pro růst obratu.",
-        ],
-        highlight1:
-          "💰 Úspora: firma nemusela nabírat dalšího obchodníka – zhruba 50 000 Kč měsíčně (roční úspora 600 000 Kč).",
-        highlight2: "⏳ Návratnost: 3–4 měsíce.",
-      },
-      {
-        title: "3️⃣ AI Analytik trhu – náskok před konkurencí každý den",
-        paragraphs: [
-          "Pozice analytika trhu a konkurence ve většině menších firem vůbec neexistuje. Často to supluje majitel nebo se tomu nevěnuje nikdo. Přitom správné informace ve správný čas rozhodují o tom, kdo vyhraje danou zakázku.",
-          "Náš AI analytik každý den sleduje, co dělá konkurence – jak mění ceny, jak reaguje na poptávky na trhu, a kontroluje co se tedy celkově na trhu děje. Dokáže včas upozornit na příležitosti i hrozby a pomůže vám jednat dřív než ostatní.",
-        ],
-        highlight1:
-          "💰 Příklad přínosu: Díky aktuálním informacím uzavřel náš klient za rok další zakázky v hodnotě  400 000 Kč.",
-        highlight2: "⏳ Návratnost: 6–8 měsíců.",
-      },
-    ],
-    ctaBelow: "Chci podobného AI zaměstnance pro svůj byznys",
   },
 } as const
 
