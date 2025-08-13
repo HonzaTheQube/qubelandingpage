@@ -26,7 +26,6 @@ export default function Home() {
       <ComparisonSection />
       <OfferSection />
       <ReferencesSection />
-      <SectionCta />
       <LecturersSection />
       <ScheduleSection />
       <PricingSection />
