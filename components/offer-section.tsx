@@ -22,7 +22,7 @@ export default function OfferSection() {
   const totalValueOriginal = 25000 + 2000 + 6000 + 970
 
   return (
-    <section className="py-16 md:py-20 lg:py-28 bg-black">
+    <section id="nabidka" className="py-16 md:py-20 lg:py-28 bg-black">
       <div className="container px-4">
         <motion.div
           className="max-w-5xl mx-auto"

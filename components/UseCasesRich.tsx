@@ -41,7 +41,7 @@ export default function UseCasesRich() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.25 }}
               transition={{ duration: 0.35, delay: i * 0.05 }}
-              className="rounded-xl bg-[#0B0B0B] border border-white/10 hover:border-primary/50 shadow-card p-6"
+              className="rounded-xl bg-[#0B0B0B] border border-white/10 hover:border-primary/50 shadow-card p-6 flex flex-col h-full"
             >
               <h3 className="text-xl md:text-2xl leading-snug font-semibold">
                 {item.title}
@@ -52,7 +52,7 @@ export default function UseCasesRich() {
                 ))}
               </div>
 
-              <div className="mt-5 space-y-2 text-sm md:text-base">
+              <div className="mt-auto pt-5 space-y-2 text-sm md:text-base">
                 <div className="rounded-lg bg-white/5 border border-white/10 px-4 py-2">
                   {item.highlight1}
                 </div>

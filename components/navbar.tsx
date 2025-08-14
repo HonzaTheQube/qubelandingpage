@@ -28,7 +28,7 @@ export default function Navbar() {
     }
   }
 
-  const navLinks = cs.navbar.links
+  const navLinks = cs.navbar.links.map((l) => (l.href === "#cena" ? { ...l, href: "#nabidka" } : l))
 
   return (
     <header
